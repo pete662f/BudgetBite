@@ -1,79 +1,27 @@
-// Initialize Firebase
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-analytics.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js";
+import { getFirestore, collection, addDoc, query, where, onSnapshot } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js";
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  // Add Firebase configuration here
+  apiKey: "AIzaSyDOw6jwkEbwxBP2yQwULIR7pRAW4U8FZRw",
+  authDomain: "budgetbite-4deca.firebaseapp.com",
+  projectId: "budgetbite-4deca",
+  storageBucket: "budgetbite-4deca.appspot.com",
+  messagingSenderId: "716294901804",
+  appId: "1:716294901804:web:fdcb67bdfc127dc2560189",
+  measurementId: "G-HBKHBV78Z4"
 };
-firebase.initializeApp(firebaseConfig);
 
-// Get references to UI elements
-const authSection = document.getElementById('authSection');
-const dataSection = document.getElementById('dataSection');
-const loginForm = document.getElementById('loginForm');
-const registerForm = document.getElementById('registerForm');
-const dataForm = document.getElementById('dataForm');
-const dataDisplay = document.getElementById('dataDisplay');
-const logoutButton = document.getElementById('logoutButton');
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
-// Handle user registration
-registerForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const email = document.getElementById('registerEmail').value;
-  const password = document.getElementById('registerPassword').value;
-  
-  firebase.auth().createUserWithEmailAndPassword(email, password)
-    .catch((error) => {
-      console.error('Error during registration:', error);
-    });
-});
-
-// Handle user login
-loginForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const email = document.getElementById('loginEmail').value;
-  const password = document.getElementById('loginPassword').value;
-
-  firebase.auth().signInWithEmailAndPassword(email, password)
-    .catch((error) => {
-      console.error('Error during login:', error);
-    });
-});
-
-// Handle user logout
-logoutButton.addEventListener('click', () => {
-  firebase.auth().signOut();
-});
-
-// Monitor user authentication state
-firebase.auth().onAuthStateChanged((user) => {
-  if (user) {
-    // User is logged in
-    authSection.style.display = 'none';
-    dataSection.style.display = 'block';
-
-    // Handle data submission
-    dataForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const dataInput = document.getElementById('dataInput').value;
-
-      firebase.firestore().collection('data').add({ 
-        uid: user.uid, 
-        content: dataInput 
-      })
-      .catch((error) => {
-        console.error('Error adding data:', error);
-      });
-    });
-
-    // Listen for data changes and display the data
-    firebase.firestore().collection('data').where('uid', '==', user.uid).onSnapshot((snapshot) => {
-      dataDisplay.innerHTML = '';
-      snapshot.forEach((doc) => {
-        const data = doc.data();
-        dataDisplay.innerHTML += `<p>${data.content}</p>`;
-      });
-    });
-  } else {
-    // User is logged out
-    authSection.style.display = 'block';
-    dataSection.style.display = 'none';
-  }
-});
+// Initialize Firebase Auth
+const auth = getAuth(app);

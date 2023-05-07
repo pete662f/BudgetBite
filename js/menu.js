@@ -5,7 +5,6 @@ export function generateMenu(){
     const menu = `
     <div tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel" class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary offcanvas offcanvas-start" style="width: 280px;">
       <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-        <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
         <span class="fs-4">Menu</span>
       </a>
       <hr>
@@ -15,8 +14,8 @@ export function generateMenu(){
             Hjem
           </a>
         </li>
-        <li style="height: 40px;">
-          <a href="/favorite/" class="nav-link ${isActive("/favorite/")}">
+        <li>
+          <a href="/favorite/" class="nav-link ${isActive("/favorite/")}" style="height: 40px;">
             <div class="row">
               <div class="col-3">Gemte</div>
               <div class="col-2"><span class="material-symbols-rounded" style='font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;'>favorite</span></div>

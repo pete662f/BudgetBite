@@ -7,12 +7,12 @@ function generateNavbar() {
     const isActive = (path) => (currentPage === path ? activeStyle : "");
 
     const navbar = `
-      <footer class="footer mt-auto py-3 bg-body-tertiary fixed-bottom">
+      <footer class="footer mt-auto pt-1 bg-body-tertiary fixed-bottom">
         <div class="container">
           <ul class="nav col-12 col-md-auto justify-content-center mb-md-0">
-            <li><a href="/" class="nav-link px-2 link-secondary"><span class="material-symbols-rounded" style='${isActive("/")}'>home</span></a></li>
-            <li><a href="/favorite/" class="nav-link px-2 link-secondary"><span class="material-symbols-rounded" style='${isActive("/favorite/")}'>favorite</span></a></li>
-            <li><a class="nav-link px-2 link-secondary" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvas"><span class="material-symbols-rounded" style='${isActive("/menu/")}'>menu</span></a></li>
+            <li class="m-auto"><a href="/" class="nav-link px-2 link-secondary"><span class="material-symbols-rounded" style='${isActive("/")}'>home</span></a></li>
+            <li class="m-auto"><a href="/favorite/" class="nav-link px-2 link-secondary"><span class="material-symbols-rounded" style='${isActive("/favorite/")}'>favorite</span></a></li>
+            <li class="m-auto"><a class="nav-link px-2 link-secondary" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvas"><span class="material-symbols-rounded" style='${isActive("/menu/")}'>menu</span></a></li>
           </ul>
         </div>
       </footer>

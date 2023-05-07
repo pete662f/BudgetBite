@@ -1,114 +1,109 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BudgetBite</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BudgetBite</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
 </head>
+
 <body class="h-100">
-  <main class="flex-shrink-0" style="padding-bottom: 78px;">
-    <div class="container-sm" >
-      <h1 class="text-center pt-3">BudgetBite</h1>
-      <div class="mb-3 d-flex justify-content-center">
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Indtas ingredienser her..."></textarea>
-      </div>
-    <div class="text-center">
-      <div class="row">
-        <div class="col">
-          <button type="button" class="btn" style="border-color:lightgray;width: 100%;">Søg</button>
+  <main class="flex-shrink-0" style="padding-bottom: 50px;">
+    <div class="container-sm">
+      <div class="mb-4">
+        <h1 class="text-center pt-3">BudgetBite</h1>
+        <div class="mb-3 d-flex justify-content-center">
+          <textarea class="form-control" id="formControlTextarea1" rows="3"
+            placeholder="Indtas ingredienser her..."></textarea>
         </div>
-        <div class="col">
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Kategori</option>
-            <option value="1">Dansk</option>
-            <option value="2">Italiensk</option>
-            <option value="3">Kinesisk</option>
-            <option value="4">Mexicansk</option>
-          </select>
-        </div>
-        <div class="col">
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Måltid</option>
-            <option value="1">Morgenmad</option>
-            <option value="2">Frokost</option>
-            <option value="3">Aftensmad</option>
-            <option value="4">Dessert</option>
-          </select>
-        </div>
-      </div>
-  </div>
-
-<div class="mt-4">
-    <div class="card mb-3">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src="/images/Boller-i-karry-scaled.jpg" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <div class="d-flex align-items-center">
-              <h5 class="card-title me-auto">Boller i Karry</h5><span class="material-symbols-rounded align-middle mb-2" style='font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;'>favorite</span>
+        <div class="text-center">
+          <div class="row">
+            <div class="col">
+              <button type="button" class="btn" style="border-color:lightgray;width: 100%;">Søg</button>
             </div>
-            <p class="card-text">Dette er en lækker ret som består af kødboller og ris.</p>
+            <div class="col">
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Kategori</option>
+                <option value="1">Dansk</option>
+                <option value="2">Italiensk</option>
+                <option value="3">Kinesisk</option>
+                <option value="4">Mexicansk</option>
+              </select>
+            </div>
+            <div class="col">
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Måltid</option>
+                <option value="1">Morgenmad</option>
+                <option value="2">Frokost</option>
+                <option value="3">Aftensmad</option>
+                <option value="4">Dessert</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h4>Retter</h4>
+      <div>
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="/images/Boller-i-karry-scaled.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <h5 class="card-title me-auto">Boller i Karry</h5><span
+                    class="material-symbols-rounded align-middle mb-2"
+                    style='font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;'>favorite</span>
+                </div>
+                <p class="card-text">Dette er en lækker ret som består af kødboller og ris.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="/images/Boller-i-karry-scaled.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <h5 class="card-title me-auto">Mørbradgryde</h5><span
+                    class="material-symbols-rounded align-middle mb-2"
+                    style='font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;'>favorite</span>
+                </div>
+                <p class="card-text">Retten her er en nem og lækker gryderet med ris.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="/images/Boller-i-karry-scaled.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <h5 class="card-title me-auto">Lasagne</h5><span class="material-symbols-rounded align-middle mb-2"
+                    style='font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;'>favorite</span>
+                </div>
+                <p class="card-text">Lasagne er en nem ret, der består af en lækker kødsovs pasta plader.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="card mb-3">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src="/images/Boller-i-karry-scaled.jpg" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <div class="d-flex align-items-center">
-              <h5 class="card-title me-auto">Mørbradgryde</h5><span class="material-symbols-rounded align-middle mb-2" style='font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;'>favorite</span>
-            </div>
-            <p class="card-text">Retten her er en nem og lækker gryderet med ris.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card mb-3">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src="/images/Boller-i-karry-scaled.jpg" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <div class="d-flex align-items-center">
-              <h5 class="card-title me-auto">Lasagne</h5><span class="material-symbols-rounded align-middle mb-2" style='font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;'>favorite</span>
-            </div>
-            <p class="card-text">Lasagne er en nem ret, der består af en lækker kødsovs pasta plader.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-</div>
-
-
-    <!--
-    <div class="row my-4 text-center">
-      <div class="col-5 themed-grid-col ps-4 pe-1"><img src="/images/Boller-i-karry-scaled.jpg" class="img-thumbnail"></div>
-      <div class="col-5 themed-grid-col px-1"><div class="d-flex flex-column"><button type="button" class="btn fs-5">Boller i Karry</button><div class="fs-6">Dette er en lækker ret som består af kødboller og ris.</div></div></div>
-      <div class="col-2 themed-grid-col ps-1 pe-4"><div class="d-flex justify-content-center align-items-center py-3"><span class="material-symbols-rounded align-middle">favorite</span></div></div>
-  </div>
-  <div class="row mb-3 text-center">
-    <div class="col-5 themed-grid-col ps-4 pe-1"><img src="/images/Boller-i-karry-scaled.jpg" class="img-thumbnail"></div>
-    <div class="col-5 themed-grid-col px-1"><div class="d-flex flex-column"><button type="button" class="btn fs-5">Mørbradgryde</button><div class="fs-6">Retten her er en nem og lækker gryderet med ris.</div></div></div>
-    <div class="col-2 themed-grid-col ps-1 pe-4"><div class="d-flex justify-content-center align-items-center py-3"><span class="material-symbols-rounded align-middle">favorite</span></div></div>
-</div>
-<div class="row mb-3 text-center">
-  <div class="col-5 themed-grid-col ps-4 pe-1"><img src="/images/Boller-i-karry-scaled.jpg" class="img-thumbnail"></div>
-  <div class="col-5 themed-grid-col px-1"><div class="d-flex flex-column"><button type="button" class="btn fs-5">Lasagne</button><div class="fs-6">Lasagne er en nem ret, der består af en lækker kødsovs pasta plader.</div></div></div>
-  <div class="col-2 themed-grid-col ps-1 pe-4"><div class="d-flex justify-content-center align-items-center py-3"><span class="material-symbols-rounded align-middle">favorite</span></div></div>
-</div>
-</div>-->
-</div>
   </main>
   <script type="module" src="/js/navbar.js"></script>
 </body>
